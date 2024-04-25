@@ -58,7 +58,7 @@ export default defineTheme({
       sidebar: [
         group("Global", [
           link("Instances", "/instances", { icon: 'mdi:web' }),
-          link("Browser extension", "/extension", { icon: 'mdi:plugin' }),
+          link("Browser extension", "/extension", { icon: 'mdi:extension' }),
         ]),
         group("Self-Hosting", [
           link("Start self-hosting", "/self-hosting/hosting-intro"),
