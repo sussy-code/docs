@@ -1,4 +1,4 @@
-### Guide to full Self-Deployment of movie-web with Docker Compose
+### Guide to full Self-Deployment of sudo-flix with Docker Compose
 
 1. **Install Docker and Docker Compose:**
    
@@ -21,10 +21,10 @@
          POSTGRES_DB: movie_web_backend
          POSTGRES_PASSWORD: YourPasswordHere
        networks:
-         - movie-web-network
+         - sudo-flix-network
 
-     movie-web-backend:
-       image: ghcr.io/movie-web/backend:latest
+     sudo-flix-backend:
+       image: ghcr.io/sudo-flix/backend:latest
        restart: unless-stopped
        environment:
          MWB_SERVER__CORS: "https://movie-backend.example.tld https://movie.example.tld"
@@ -43,11 +43,11 @@
        depends_on:
          - postgres
        networks:
-         - movie-web-network
+         - sudo-flix-network
 
-     movie-web-frontend:
+     sudo-flix-frontend:
        build:
-         context: https://github.com/movie-web/movie-web.git
+         context: https://github.com/sussy-code/smov.git
          args:
            TMDB_READ_API_KEY: "YourTMDBReadAPIKeyHere"
            CORS_PROXY_URL: "https://cors.example.tld https://second.cors.example.tld"
@@ -60,26 +60,26 @@
        ports:
          - "80:80"
        networks:
-         - movie-web-network
+         - sudo-flix-network
        restart: unless-stopped
 
-     movie-web-proxy:
-       image: ghcr.io/movie-web/simple-proxy:latest
+     sudo-flix-proxy:
+       image: ghcr.io/sudo-flix/simple-proxy:latest
        ports:
          - "3000:3000"
        networks:
-         - movie-web-network
+         - sudo-flix-network
        restart: unless-stopped
 
    networks:
-     movie-web-network:
+     sudo-flix-network:
        driver: bridge
     ```
     **Important:** 
     * Replace `YourPasswordHere` with your secure database password.
     * Generate a strong session secret and replace `32CharacterLongStringHere`.
     * Replace `TMDBReadAPIKey` with your api key learn more [here](../client/tmdb.mdx).
-    * replace `yourDomainHere` with whatever you'll be using to access your main site, like movie-web.app
+    * replace `yourDomainHere` with whatever you'll be using to access your main site, like sudo-flix.app
     * replace `meta__name` and `meta__description`
 2.  **Start the Backend:**  Open a terminal in the directory containing `docker-compose.yml` and execute:
 

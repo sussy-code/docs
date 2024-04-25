@@ -10,14 +10,14 @@ export default function LandingPage() {
   return (
     <GuiderLayout meta={{ layout: 'page' }}>
       <Hero>
-        <Hero.Title>movie-web</Hero.Title>
+        <Hero.Title>sudo-flix</Hero.Title>
         <Hero.Subtitle>
           A simple and no-BS app for watching movies and TV shows. Totally free
           and open source, forever.
         </Hero.Subtitle>
         <Hero.Actions>
           <Button to="/self-hosting/hosting-intro">Get Started</Button>
-          <Button to="https://github.com/movie-web/movie-web" type="secondary">
+          <Button to="https://github.com/sussy-code/smov" type="secondary">
             Open on GitHub →
           </Button>
         </Hero.Actions>
@@ -27,7 +27,7 @@ export default function LandingPage() {
           Can be easily hosted on any static website host.
         </Card>
         <Card icon="material-symbols:hangout-video-off" title="No Ads">
-          movie-web will never show ads, enjoy watching without interruptions.
+          sudo-flix will never show ads, enjoy watching without interruptions.
         </Card>
         <Card icon="ic:baseline-ondemand-video" title="Custom Player">
           Enjoy a fully custom video player including streaming integration,
@@ -46,7 +46,7 @@ export default function LandingPage() {
           sync effortlessly across all your devices.
         </Card>
         <Card icon="mdi:power-plug-outline" title="Modular by design">
-          Mix and match different parts of the movie-web service, host your
+          Mix and match different parts of the sudo-flix service, host your
           backend or use ours, it&apos;ll work either way.
         </Card>
         <Card icon="mdi:flag" title="Multiple Languages">

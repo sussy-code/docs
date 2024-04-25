@@ -16,7 +16,7 @@ To do this, you will need to follow the guide below...
 
 <Steps>
   <Steps.Step>
-    If you have not already, click [here](https://github.com/movie-web/movie-web/fork) to fork the movie-web Github repository.
+    If you have not already, click [here](https://github.com/sussy-code/smov/fork) to fork the sudo-flix Github repository.
   </Steps.Step>
   <Steps.Step>
     Paste the below file into your repository's root `/.github/workflows` directory
@@ -63,10 +63,10 @@ Your instance should now be automatically updated to the latest version.
 You can manually update by executing the following commands in the root directory of the repository you have created, you would have to do this every time a push occurs to stay up-to-date:
 
 ```bash
-git remote add movie-web https://github.com/movie-web/movie-web.git
-git fetch movie-web
+git remote add sudo-flix https://github.com/sussy-code/smov.git
+git fetch sudo-flix
 # Change `dev` to `master` if you want a stable experience
-git merge movie-web/dev --allow-unrelated-histories
+git merge sudo-flix/dev --allow-unrelated-histories
 git push -f # Force push to your origin main branch
 ```
 
@@ -76,6 +76,6 @@ git push -f # Force push to your origin main branch
 
 You will need the latest version of the proxy worker. Redeploy a new worker using [our self-hosting guide](../proxy/deploy.md).
 
-After you have the new worker, you will need to [get the new movie-web deployment files](https://github.com/movie-web/movie-web/releases/latest). **You CANNOT use the non-PWA version**. To upgrade safely without any complications, you need to update with `movie-web.pwa.zip`, Not the non-PWA version.
+After you have the new worker, you will need to [get the new sudo-flix deployment files](https://github.com/sussy-code/smov/releases/latest). **You CANNOT use the non-PWA version**. To upgrade safely without any complications, you need to update with `sudo-flix.pwa.zip`, Not the non-PWA version.
 
 In the future, you will **ALWAYS** need to go with the PWA option. You cannot downgrade to non-PWA version without facing many caching complications.

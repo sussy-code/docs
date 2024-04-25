@@ -1,4 +1,4 @@
-# movie-web docs
+# sudo-flix docs
 
-Find it at https://movie-web.github.io/docs
+Find it at https://sussy-code.github.io/docs
 

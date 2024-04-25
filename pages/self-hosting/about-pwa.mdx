@@ -4,20 +4,20 @@ title: 'PWA vs no-PWA'
 
 # About Self-hosting PWA
 
-So that clients can have a more native app-like experience on mobile, movie-web has a function to support Progressive Web Apps (PWA). You can learn more about what a PWA is [here](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app).
+So that clients can have a more native app-like experience on mobile, sudo-flix has a function to support Progressive Web Apps (PWA). You can learn more about what a PWA is [here](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app).
 
-In movie-web version 3, PWAs were enabled by default. Unfortunately, PWAs tend to come with caching complications that can be tricky to resolve. That's why we have **disabled** PWAs by default in movie-web version 4. If you are upgrading from version 3, please [read our upgrade guide](../client/upgrade.mdx) for more information.
+In sudo-flix version 3, PWAs were enabled by default. Unfortunately, PWAs tend to come with caching complications that can be tricky to resolve. That's why we have **disabled** PWAs by default in sudo-flix version 4. If you are upgrading from version 3, please [read our upgrade guide](../client/upgrade.mdx) for more information.
 
 <Warning>
 Enabling PWAs means that you cannot disable it again - Please only proceed if you know what you are doing!
 </Warning>
 
-## If you are running movie-web on a hosting platform such as Vercel
+## If you are running sudo-flix on a hosting platform such as Vercel
 
-If your hosting is building movie-web from the source, you can enable PWAs using the [`VITE_PWA_ENABLED`](../client/configuration.mdx#vite-pwa-enabled) environment variable.
+If your hosting is building sudo-flix from the source, you can enable PWAs using the [`VITE_PWA_ENABLED`](../client/configuration.mdx#vite-pwa-enabled) environment variable.
 
 Setting [`VITE_PWA_ENABLED`](../client/configuration.mdx#vite-pwa-enabled) to `true` will generate a [service worker file](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#service_worker) and a [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest) which enable the website to be installed from a [web browser both on Desktop and on Mobile](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installation_from_the_web).
 
-## If you are running movie-web using the .zip files
+## If you are running sudo-flix using the .zip files
 
-If you are downloading the movie-web `zip` files from our GitHub and installing them on a static website host, then all you need to do is to make sure to download the [`movie-web.pwa.zip`](https://github.com/movie-web/movie-web/releases/latest/download/movie-web.pwa.zip) file instead of the `movie-web.zip` file!
+If you are downloading the sudo-flix `zip` files from our GitHub and installing them on a static website host, then all you need to do is to make sure to download the [`sudo-flix.pwa.zip`](https://github.com/sussy-code/smov/releases/latest/download/sudo-flix.pwa.zip) file instead of the `sudo-flix.zip` file!

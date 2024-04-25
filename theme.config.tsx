@@ -5,25 +5,25 @@ import coverUrl from "./public/cover.png";
 import faviconUrl from "./public/favicon.ico";
 
 export default defineTheme({
-  github: "movie-web/movie-web",
+  github: "sussy-code/smov",
   contentFooter: {
-    text: "Made with 💜",
-    editRepositoryBase: "https://github.com/movie-web/docs/blob/master",
+    text: "Made with :3 (sillyness)",
+    editRepositoryBase: "https://github.com/sussy-code/docs/blob/master",
     socials: [
-      social.github("https://github.com/movie-web"),
-      social.discord("https://movie-web.github.io/links/discord"),
+      social.github("https://github.com/sussy-code"),
+      social.discord("https://discord.gg/9vmr6vBQKS"),
     ]
   },
   meta: (pageMeta) => (
     <NextSeo {...{
-      title: `${pageMeta.title ?? "For all your movie and TV show needs"} | movie-web`,
-      description: pageMeta.description ?? "movie-web is a free and open source streaming site, no ads, no tracking, no nonsense.",
+      title: `${pageMeta.title ?? "Watch your favorite shows and movies for free with no ads ever! (っ'ヮ'c)"} | sudo-flix`,
+      description: pageMeta.description ?? "sudo-flix is a free and open source streaming site, no ads, no tracking, no nonsense.",
       openGraph: {
         images: [{
           url: coverUrl.src,
         }],
-        title: `${pageMeta.title ?? "For all your movie and TV show needs"} | movie-web`,
-        description: pageMeta.description ?? "movie-web is a free and open source streaming site, no ads, no tracking, no nonsense.",
+        title: `${pageMeta.title ?? "Watch your favorite shows and movies for free with no ads ever! (っ'ヮ'c)"} | sudo-flix`,
+        description: pageMeta.description ?? "sudo-flix is a free and open source streaming site, no ads, no tracking, no nonsense.",
       },
       twitter: {
         cardType: 'summary_large_image',

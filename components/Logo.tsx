@@ -5,7 +5,7 @@ import logoUrl from '../public/icon-light.png';
 export function Logo() {
   return (
     <Link href="/" className={classes.logo}>
-      <img src={logoUrl.src} alt="Logo of movie-web" />
+      <img src={logoUrl.src} alt="Logo of sudo-flix" />
     </Link>
   );
 }

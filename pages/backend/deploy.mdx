@@ -37,14 +37,14 @@ This method provides a straightforward setup with minimal configuration. For mor
         ports:
           - "5432:5432" 
         networks:
-          - movie-web-network
+          - sudo-flix-network
 
-      movie-web:
-        image: ghcr.io/movie-web/backend:latest
+      sudo-flix:
+        image: ghcr.io/sudo-flix/backend:latest
         environment:
           MWB_POSTGRES__CONNECTION: postgresql://movie_web_user:YourPasswordHere@postgres:5432/movie_web_backend
           MWB_CRYPTO__SESSION_SECRET: 32CharacterLongStringHere 
-          MWB_META__NAME: unofficial-movie-web 
+          MWB_META__NAME: unofficial-sudo-flix 
           MWB_POSTGRES__MIGRATE_ON_BOOT: "true"
           MIKRO_ORM_MIGRATIONS_DISABLE_FOREIGN_KEYS: "true" 
         ports:
@@ -52,10 +52,10 @@ This method provides a straightforward setup with minimal configuration. For mor
         depends_on:
           - postgres
         networks:
-          - movie-web-network
+          - sudo-flix-network
 
     networks:
-      movie-web-network: 
+      sudo-flix-network: 
         driver: bridge
     ```
 

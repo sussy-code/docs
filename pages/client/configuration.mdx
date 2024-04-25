@@ -4,22 +4,22 @@ title: 'Configuration'
 
 # Client Config Reference
 
-The config for the movie-web can be provided in 2 different ways, depending on how you are hosting movie-web:
+The config for the sudo-flix can be provided in 2 different ways, depending on how you are hosting sudo-flix:
 
 - If you are using a static web hoster (such as Vercel, Netlify or Cloudflare Pages), you can use [environment variables](#method-1-environment-variables).
-- If you are hosting movie-web using shared hosting (such as cPanel or FTP), please use [the config file](#method-2-config-file).
+- If you are hosting sudo-flix using shared hosting (such as cPanel or FTP), please use [the config file](#method-2-config-file).
 
 Both methods can specify any of the keys listed in the [Shared Config](#config-reference-shared-config) section.
 
 ## Method 1 - Environment Variables
 
-The movie-web client can be configured using environment variables **at build time**. You cannot use this method if hosting the pre-built `movie-web.zip` files!
+The sudo-flix client can be configured using environment variables **at build time**. You cannot use this method if hosting the pre-built `sudo-flix.zip` files!
 
-Using environment variables to configure movie-web also allows configuration of some [environment variable specific keys](#config-reference-environment-variables-only).
+Using environment variables to configure sudo-flix also allows configuration of some [environment variable specific keys](#config-reference-environment-variables-only).
 
 ## Method 2 - Config File
 
-When using the pre-built `movie-web.zip`, you can set the configuration in the `config.js` file.
+When using the pre-built `sudo-flix.zip`, you can set the configuration in the `config.js` file.
 
 The `config.js` file contains a JavaScript object which must be set to the correct values:
 
@@ -36,7 +36,7 @@ window.__CONFIG__ = {
 - Type: `string`
 - Default: `""`
 
-This is the **read** API key from TMDB to allow movie-web to search for media. [Get one by following our guide](./tmdb.mdx).
+This is the **read** API key from TMDB to allow sudo-flix to search for media. [Get one by following our guide](./tmdb.mdx).
 
 <Caution>
   **Required. The client will not work properly if this is not configured.**
@@ -85,9 +85,9 @@ Setting this configuration value to `true` will enable the history-router.
 - Default: `""`
 - Example: `"https://backend.example.com"`
 
-This is the URL for the movie-web backend server which handles cross-device syncing.
+This is the URL for the sudo-flix backend server which handles cross-device syncing.
 
-The backend server can be found at https://github.com/movie-web/backend and is offered as a [Docker](https://docs.docker.com/get-started/overview/) image for deployment.
+The backend server can be found at https://github.com/sussy-code/backend and is offered as a [Docker](https://docs.docker.com/get-started/overview/) image for deployment.
 
 Backend URL must **not** end with a slash.
 
@@ -101,7 +101,7 @@ If you want your users to be prompted with an onboarding screen before they star
 ### `VITE_ONBOARDING_CHROME_EXTENSION_INSTALL_LINK`
 
 - Type: `string`
-- Default: `"https://chromewebstore.google.com/detail/movie-web-extension/hoffoikpiofojilgpofjhnkkamfnnhmm"`
+- Default: `"https://chromewebstore.google.com/detail/sudo-flix-extension/hoffoikpiofojilgpofjhnkkamfnnhmm"`
 - Example: `"https://google.com"`
 
 When onboarding is enabled using `VITE_HAS_ONBOARDING`. This link will be used to link the proper Chrome extension to install.
@@ -111,7 +111,7 @@ If omitted, this will still show the extension onboarding screen, just without a
 ### `VITE_ONBOARDING_FIREFOX_EXTENSION_INSTALL_LINK`
 
 - Type: `string`
-- Default: `"https://addons.mozilla.org/en-GB/firefox/addon/movie-web-extension"`
+- Default: `"https://addons.mozilla.org/en-GB/firefox/addon/sudo-flix-extension"`
 - Example: `"https://google.com"`
 
 When onboarding is enabled using `VITE_HAS_ONBOARDING`. This link will be used to link the proper Firefox extension to install.
@@ -198,7 +198,7 @@ The Google Analytics ID for tracking user behavior. If omitted, no tracking will
 
 - Type: `string`
 - Default: `""`
-- Example: `"https://movie-web.app"`
+- Example: `"https://sudo-flix.lol"`
 
 The domain where the app lives. Only required when having the [`VITE_OPENSEARCH_ENABLED`](#vite-opensearch-enabled) option enabled.
 
