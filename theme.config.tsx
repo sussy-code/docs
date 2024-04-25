@@ -56,7 +56,10 @@ export default defineTheme({
   directories: [
     directory("main", {
       sidebar: [
-        link("Instances", "/instances", { icon: 'mdi:web' }),
+        group("Global", [
+          link("Instances", "/instances", { icon: 'mdi:web' }),
+          link("Browser extension", "/extension", { icon: 'mdi:plugin' }),
+        ]),
         group("Self-Hosting", [
           link("Start self-hosting", "/self-hosting/hosting-intro"),
           link("Configure backend", "/self-hosting/use-backend"),
