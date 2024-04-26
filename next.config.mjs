@@ -6,5 +6,4 @@ const withGuider = guider({
 
 export default withGuider({
   output: 'export',
-  basePath: '/docs',
 });
