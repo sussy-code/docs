@@ -4,12 +4,17 @@ import {
   CardGrid,
   GuiderLayout,
   Hero,
+  Frame,
 } from '@neato/guider/client';
+import logoUrl from '../public/transparent-logo.png';
 
 export default function LandingPage() {
   return (
     <GuiderLayout meta={{ layout: 'page' }}>
       <Hero>
+        <div style={{ paddingBottom: '2em'}}>
+        <img src={logoUrl.src} alt="Logo of sudo-flix" />
+        </div>
         <Hero.Title>sudo-flix</Hero.Title>
         <Hero.Subtitle>
           A simple and no-BS app for watching movies and TV shows. Totally free

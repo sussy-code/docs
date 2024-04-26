@@ -65,7 +65,7 @@ export default defineTheme({
       "line": "#37334C",
       "text": "#8C899A",
       "textLighter": "#A6A4AE",
-      "textHighlight": "#fff"
+      "textHighlight": "#FFF"
     },
   },
   directories: [

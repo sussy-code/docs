@@ -1,7 +1,7 @@
 .logo {
-  border-radius: 5px;
+  border-radius: 0.6rem;
   margin-left: -0.5rem;
-  padding: 0.5rem;
+  padding: 0.65rem;
   transition: transform 100ms ease-in-out, background-color 100ms ease-in-out;
 }
 
