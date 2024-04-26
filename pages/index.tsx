@@ -12,8 +12,8 @@ export default function LandingPage() {
   return (
     <GuiderLayout meta={{ layout: 'page' }}>
       <Hero>
-        <div style={{ paddingBottom: '2em'}}>
-        <img src={logoUrl.src} alt="Logo of sudo-flix" />
+        <div style={{ paddingBottom: '2em' }}>
+          <img src={logoUrl.src} alt="Logo of sudo-flix" />
         </div>
         <Hero.Title>sudo-flix</Hero.Title>
         <Hero.Subtitle>
