@@ -22,57 +22,59 @@ This method provides a straightforward setup with minimal configuration. For mor
 * **Docker Compose:** Install Docker Compose following the instructions for your operating system: [Docker-Compose installation](https://docs.docker.com/compose/install/)
 
 **Setup**
-1.  **Create `docker-compose.yml`:**
-
-    ```yaml
-    version: '3.8'
-
-    services:
-      postgres:
-        image: postgres
-        environment:
-          POSTGRES_USER: movie_web_user 
-          POSTGRES_DB: movie_web_backend 
-          POSTGRES_PASSWORD: YourPasswordHere 
-        ports:
-          - "5432:5432" 
-        networks:
-          - sudo-flix-network
-
-      sudo-flix:
-        image: ghcr.io/sudo-flix/backend:latest
-        environment:
-          MWB_POSTGRES__CONNECTION: postgresql://movie_web_user:YourPasswordHere@postgres:5432/movie_web_backend
-          MWB_CRYPTO__SESSION_SECRET: 32CharacterLongStringHere 
-          MWB_META__NAME: unofficial-sudo-flix 
-          MWB_POSTGRES__MIGRATE_ON_BOOT: "true"
-          MIKRO_ORM_MIGRATIONS_DISABLE_FOREIGN_KEYS: "true" 
-        ports:
-          - "80:80"
-        depends_on:
-          - postgres
-        networks:
-          - sudo-flix-network
-
-    networks:
-      sudo-flix-network: 
-        driver: bridge
+<Steps>
+  <Steps.Step>
+     **Create `docker-compose.yml`:**
+     ```yaml
+       version: '3.8'
+       services:
+         postgres:
+           image: postgres
+           environment:
+             POSTGRES_USER: movie_web_user 
+             POSTGRES_DB: movie_web_backend 
+             POSTGRES_PASSWORD: YourPasswordHere 
+           ports:
+             - "5432:5432" 
+           networks:
+             - sudo-flix-network
+         sudo-flix:
+           image: ghcr.io/sudo-flix/backend:latest
+           environment:
+             MWB_POSTGRES__CONNECTION: postgresql://movie_web_user:YourPasswordHere@postgres:5432/movie_web_backend
+             MWB_CRYPTO__SESSION_SECRET: 32CharacterLongStringHere 
+             MWB_META__NAME: unofficial-sudo-flix 
+             MWB_POSTGRES__MIGRATE_ON_BOOT: "true"
+             MIKRO_ORM_MIGRATIONS_DISABLE_FOREIGN_KEYS: "true" 
+           ports:
+             - "80:80"
+           depends_on:
+             - postgres
+           networks:
+             - sudo-flix-network
+       networks:
+         sudo-flix-network: 
+           driver: bridge
     ```
+      **Important:** 
+       * Replace `YourPasswordHere` with your secure database password.
+       * Generate a strong session secret and replace `32CharacterLongStringHere`.
+  </Steps.Step>
 
-    **Important:** 
-     * Replace `YourPasswordHere` with your secure database password.
-     * Generate a strong session secret and replace `32CharacterLongStringHere`.
-2.  **Start the Backend:**  Open a terminal in the directory containing `docker-compose.yml` and execute:
+  <Steps.Step>
+    **Start the Backend:**  Open a terminal in the directory containing `docker-compose.yml` and execute:
 
-    ```bash
-    docker-compose up -d 
-    ```
+     ```bash
+     docker-compose up -d 
+     ```
+  </Steps.Step>
+</Steps>
 
-**Accessing Your Backend**
+### Accessing Your Backend
 
 Your backend should be accessible on `(YourPrivateIP):80`. To share it outside your local network, you'll need to configure port forwarding or cloudflared tunnel. 
 
-**Optional: Implementing a Reverse Proxy**
+### Optional: Implementing a Reverse Proxy
 
 To enhance your SSL and domain configuration, it's advisable to establish a reverse proxy, such as Nginx. For an optimal choice in this regard, Cloudflare Zero Trust Tunnel is recommended. You can find more information [here](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/).
 
@@ -86,12 +88,34 @@ Railway offers you $5 of credit once you verify your account, which is enough to
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/TS4mw5)
 
-1. Login to your [Railway](https://railway.app) account if you have one, otherwise create one [here](https://railway.app/login).
-   1. If you are signing up, then verify your account by clicking the link in the email Railway sends you.
-   1. If you created your account with an email, then to verify your account further, go to your account, then plans and verify your account with a GitHub account.
-1. Click the [`Deploy on Railway`](https://railway.app/template/TS4mw5) button above.
-1. If a `Configure` button is displayed, click on it and allow Railway to access your GitHub account. 
-1. Fill in the required variables or change the default values.
-1. The `Deploy` button at the bottom of the template should be active, click on it.
-1. Once the `Backend` service has deployed, copy the URL from the `Deployments` page. (Might take a second for it to be available after the service has deployed)
-1. Congratulations! You have deployed the backend, you can now [set up the client](../self-hosting/use-backend.mdx).
+<Steps>
+  <Steps.Step>
+    Login to your [Railway](https://railway.app) account if you have one, otherwise create one [here](https://railway.app/login).
+      - If you are signing up, then verify your account by clicking the link in the email Railway sends you.
+      - If you created your account with an email, then to verify your account further, go to your account, then plans and verify your account with a GitHub account.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click the [`Deploy on Railway`](https://railway.app/template/TS4mw5) button above.
+  </Steps.Step>
+  
+  <Steps.Step>
+    If a `Configure` button is displayed, click on it and allow Railway to access your GitHub account. 
+  </Steps.Step>
+  
+  <Steps.Step>
+    Fill in the required variables or change the default values.
+  </Steps.Step>
+  
+  <Steps.Step>
+    The `Deploy` button at the bottom of the template should be active, click on it.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Once the `Backend` service has deployed, copy the URL from the `Deployments` page. (Might take a second for it to be available after the service has deployed)
+  </Steps.Step>
+  
+  <Steps.Step>
+    Congratulations! You have deployed the backend, you can now [set up the client](../self-hosting/use-backend.mdx).
+  </Steps.Step>
+</Steps>

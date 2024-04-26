@@ -10,13 +10,32 @@ Netlify has a very generous free plan, so you'll be able to host your proxy for 
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sussy-code/simple-proxy)
 
-1. Create a GitHub account at https://github.com/signup if you don't have one already.
-1. Click on the `Deploy to Netlify` button above.
-   1. Authorize Netlify to connect with GitHub by clicking the `Connect to GitHub` button.
-1. There should now be a `Save & Deploy` button, click it.
-1. Once the deployment is complete, click on the `Get Started` button that pops up, this will redirect you to the dashboard of your site.
-1. Click on the only site in the `Sites` section of your dashboard.
-1. Find the link of your site near the top of the page, it should look something like `https://<random-words>.netlify.app`. Right click the link, click `Copy link address`. [Now you'll just have to set up the client](../extra/streaming.mdx#method-1-self-hosted-proxy)!
+<Steps>
+   <Steps.Step>
+     Create a GitHub account at https://github.com/signup if you don't have one already.
+   </Steps.Step>
+
+   <Steps.Step>
+    Click on the `Deploy to Netlify` button above.
+       - Authorize Netlify to connect with GitHub by clicking the `Connect to GitHub` button.
+   </Steps.Step>
+
+   <Steps.Step>
+     There should now be a `Save & Deploy` button, click it.
+   </Steps.Step>
+
+   <Steps.Step>
+     Once the deployment is complete, click on the `Get Started` button that pops up, this will redirect you to the dashboard of your site.
+   </Steps.Step>
+
+   <Steps.Step>
+     Click on the only site in the `Sites` section of your dashboard.
+   </Steps.Step>
+
+   <Steps.Step>
+     Find the link of your site near the top of the page, it should look something like `https://<random-words>.netlify.app`. Right click the link, click `Copy link address`. [Now you'll just have to set up the client](../extra/streaming.mdx#method-1-self-hosted-proxy)!
+   </Steps.Step>
+</Steps>
 
 ## Method 2 - Cloudflare (Easy)
 
@@ -28,29 +47,69 @@ Cloudflare has a generous free plan, so you don't need to pay anything unless yo
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/sussy-code/simple-proxy)
 
-1. Create a GitHub account at https://github.com if you don't have one.
-1. Click the `Deploy with workers` button above.
-1. Click the `Authorize Workers` button to authorize Cloudflare to talk to GitHub.
-1. Authorize Cloudflare Workers in the GitHub page that pops up.
-1. Follow the instructions to configure your Cloudflare account. Select `I have an account` if you have a Cloudflare account already, otherwise follow the link to create one.
-1. Click the link to [`Workers Dashboard`](https://dash.cloudflare.com/sign-up?to=/:account/workers-and-pages) to find your account ID.
-   1. You can copy your account ID from the URL e.g. https://dash.cloudflare.com/ab7cb454c93987b6343350d4e84c16c7/workers-and-pages/create where `ab7cb454c93987b6343350d4e84c16c7` is the account ID.
-   1. Paste the account ID into the text box on the original Cloudflare workers page.
-1. Click the link to [`My Profile`](https://dash.cloudflare.com/profile/api-tokens), to create an API token.
-   1. Click `Create Token`.
-   1. Select `Use template` next to `Edit Cloudflare Workers`.
-   1. Under `Account Resources`, select `Include` and your account under the dropdown.
-   1. Under `Zone Resources`, select `All zones` (You can select a more specific zone if you have the zones available).
-   1. At the bottom of the page, click `Continue to summary`.
-   1. On the next screen, click `Create token`.
-   1. Copy the API token and **save it in a safe place, it won't be shown again**.
-   1. Paste the API token into the Cloudflare Workers API Token text box.
-1. Click `Fork the Repository` and follow the instructions to enable workflows.
-1. Click `Deploy` to deploy to Cloudflare Workers.
-1. Congratulations! Your worker is now deploying. Please wait for the GitHub Action to build and publish your worker.
-1. You can click the [`Worker dash`](https://dash.cloudflare.com/sign-up?to=/:account/workers-and-pages) and `GitHub repo` buttons to see the status of the deploy.
-1. When the worker has deployed, you will need to take note of the URL. This can be found on Cloudflare under [Workers and Pages -> Overview](https://dash.cloudflare.com/sign-up?to=/:account/workers-and-pages) -> Proxy.
-1. Use the URL you took note of and [set up a custom proxy in the client](../extra/streaming.mdx#method-1-self-hosted-proxy).
+<Steps>
+  <Steps.Step>
+    Create a GitHub account at https://github.com if you don't have one.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click the `Deploy with workers` button above.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click the `Authorize Workers` button to authorize Cloudflare to talk to GitHub.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Authorize Cloudflare Workers in the GitHub page that pops up.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Follow the instructions to configure your Cloudflare account. Select `I have an account` if you have a Cloudflare account already, otherwise follow the link to create one.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click the link to [`Workers Dashboard`](https://dash.cloudflare.com/sign-up?to=/:account/workers-and-pages) to find your account ID.
+     - You can copy your account ID from the URL e.g. https://dash.cloudflare.com/ab7cb454c93987b6343350d4e84c16c7/workers-and-pages/create where `ab7cb454c93987b6343350d4e84c16c7` is the account ID.
+     - Paste the account ID into the text box on the original Cloudflare workers page.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click the link to [`My Profile`](https://dash.cloudflare.com/profile/api-tokens), to create an API token.
+     - Click `Create Token`.
+     - Select `Use template` next to `Edit Cloudflare Workers`.
+     - Under `Account Resources`, select `Include` and your account under the dropdown.
+     - Under `Zone Resources`, select `All zones` (You can select a more specific zone if you have the zones available).
+     - At the bottom of the page, click `Continue to summary`.
+     - On the next screen, click `Create token`.
+     - Copy the API token and **save it in a safe place, it won't be shown again**.
+     - Paste the API token into the Cloudflare Workers API Token text box.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click `Fork the Repository` and follow the instructions to enable workflows.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click `Deploy` to deploy to Cloudflare Workers.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Congratulations! Your worker is now deploying. Please wait for the GitHub Action to build and publish your worker.
+  </Steps.Step>
+  
+  <Steps.Step>
+    You can click the [`Worker dash`](https://dash.cloudflare.com/sign-up?to=/:account/workers-and-pages) and `GitHub repo` buttons to see the status of the deploy.
+  </Steps.Step>
+  
+  <Steps.Step>
+    When the worker has deployed, you will need to take note of the URL. This can be found on Cloudflare under [Workers and Pages -> Overview](https://dash.cloudflare.com/sign-up?to=/:account/workers-and-pages) -> Proxy.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Use the URL you took note of and [set up a custom proxy in the client](../extra/streaming.mdx#method-1-self-hosted-proxy).
+  </Steps.Step>
+</Steps>
 
 ## Method 2 - Cloudflare (Manual)
 
@@ -58,22 +117,53 @@ Cloudflare has a generous free plan, so you don't need to pay anything unless yo
 The sources showbox and febbox do NOT work with cloudflare. Use a different host if you want those to work.
 </Warning>
 
-1. Login to your Cloudflare account if you have one, otherwise create one [here](https://dash.cloudflare.com/sign-up?to=/:account/workers-and-pages)
-   1. If you are signing up for an account, make sure to verify your email before going further!
-1. Download the latest version of the Cloudflare [`simple-proxy-cloudflare.mjs` script from here](https://github.com/sussy-code/simple-proxy/releases/latest/download/simple-proxy-cloudflare.mjs).
-1. Go to `Workers & Pages` and then `Overview` in the left-hand navigation bar.
-1. Click the `Create Worker` button
-   1. If you've made a worker or pages application before, you will need to click `Create Application` first
-1. Give your worker a name and click `Deploy`. This can be anything you would like!
-1. On the `Congratulations` web page, click the `Edit code` button to edit the code in the worker you have just created.
-1. There should now be a code editor on the left hand side on the web page.
-   1. Select all of the existing template code and delete it. **You must make sure all of the code is deleted for this to work!**
-   1. Go to your downloads folder and open up the `simple-proxy-cloudflare.mjs` file you downloaded earlier in a text editor, and **copy** the contents.
-   1. Back in your browser, paste the contents of the file into the code editor.
-1. The `Save and deploy` button in the top right corner should now be active, click it to deploy your proxy!
-1. A confirmation dialog will appear, click `Save and deploy` once more.
-1. Your worker is now deployed! You can click the back button in the top left to take you back to the summary screen.
-1. On the summary screen, your worker link will be displayed under `Preview`. Right click the link, click `Copy link address` and save the link somewhere - [you will need it to set up the client](../5.extra/1.streaming.md#method-1---self-hosted-proxy)!
+<Steps>
+  <Steps.Step>
+    Login to your Cloudflare account if you have one, otherwise create one [here](https://dash.cloudflare.com/sign-up?to=/:account/workers-and-pages)
+     - If you are signing up for an account, make sure to verify your email before going further!
+  </Steps.Step>
+  
+  <Steps.Step>
+    Download the latest version of the Cloudflare [`simple-proxy-cloudflare.mjs` script from here](https://github.com/sussy-code/simple-proxy/releases/latest/download/simple-proxy-cloudflare.mjs).
+  </Steps.Step>
+  
+  <Steps.Step>
+    Go to `Workers & Pages` and then `Overview` in the left-hand navigation bar.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click the `Create Worker` button
+     - If you've made a worker or pages application before, you will need to click `Create Application` first
+     - Give your worker a name and click `Deploy`. This can be anything you would like!
+  </Steps.Step>
+  
+  <Steps.Step>
+    On the `Congratulations` web page, click the `Edit code` button to edit the code in the worker you have just created.
+  </Steps.Step>
+  
+  <Steps.Step>
+    There should now be a code editor on the left hand side on the web page.
+     - Select all of the existing template code and delete it. **You must make sure all of the code is deleted for this to work!**
+     - Go to your downloads folder and open up the `simple-proxy-cloudflare.mjs` file you downloaded earlier in a text editor, and **copy** the contents.
+     - Back in your browser, paste the contents of the file into the code editor.
+  </Steps.Step>
+  
+  <Steps.Step>
+    The `Save and deploy` button in the top right corner should now be active, click it to deploy your proxy!
+  </Steps.Step>
+  
+  <Steps.Step>
+    A confirmation dialog will appear, click `Save and deploy` once more.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Your worker is now deployed! You can click the back button in the top left to take you back to the summary screen.
+  </Steps.Step>
+  
+  <Steps.Step>
+    On the summary screen, your worker link will be displayed under `Preview`. Right click the link, click `Copy link address` and save the link somewhere - [you will need it to set up the client](../5.extra/1.streaming.md#method-1---self-hosted-proxy)!
+  </Steps.Step>
+</Steps>
 
 ## Method 3 - Railway (Easy)
 
@@ -81,14 +171,33 @@ Railway offers you $5 of credit once you verify your account, which is enough to
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/dyYHq1)
 
-1. Login to your [Railway](https://railway.app) account if you have one, otherwise create one [here](https://railway.app/login).
-   1. If you are signing up, then verify your account by clicking the link in the email Railway sends you.
-   1. If you created your account with an email, then to verify your account further, go to your account, then plans and verify your account with a GitHub account.
-1. Click the [`Deploy on Railway`](https://railway.app/template/dyYHq1) button above.
-1. If a `Configure` button is displayed, click on it and allow Railway to access your GitHub account.
-1. The `Deploy` button at the bottom of the template should be active, click on it.
-1. Once the proxy has deployed, copy the URL from the `Deployments` page.
-1. Congratulations! You have deployed the proxy, [you can now set up the client](../extra/streaming.mdx#method-1-self-hosted-proxy).
+<Steps>
+  <Steps.Step>
+    Login to your [Railway](https://railway.app) account if you have one, otherwise create one [here](https://railway.app/login).
+      - If you are signing up, then verify your account by clicking the link in the email Railway sends you.
+      - If you created your account with an email, then to verify your account further, go to your account, then plans and verify your account with a GitHub account.
+  </Steps.Step>
+
+  <Steps.Step>
+    Click the [`Deploy on Railway`](https://railway.app/template/dyYHq1) button above.
+  </Steps.Step>
+
+  <Steps.Step>
+    If a `Configure` button is displayed, click on it and allow Railway to access your GitHub account.
+  </Steps.Step>
+
+  <Steps.Step>
+    The `Deploy` button at the bottom of the template should be active, click on it.
+  </Steps.Step>
+
+  <Steps.Step>
+    Once the proxy has deployed, copy the URL from the `Deployments` page.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Congratulations! You have deployed the proxy, [you can now set up the client](../extra/streaming.mdx#method-1-self-hosted-proxy).
+  </Steps.Step>
+</Steps>
 
 ## Method 4 - Docker
 

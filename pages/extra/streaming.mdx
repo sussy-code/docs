@@ -23,12 +23,28 @@ This method is recommended if you want to host a proxy for your friends and or f
 
 {/* This method is recommended if you want to host a proxy for your friends and family to use, or if you want to use sudo-flix on a device that doesn't support the [browser extension](#method-1---browser-extension), such as a smart TV or mobile device.*/}
 
-1. Set up a proxy using one of our [guides](../proxy/deploy.mdx), [though we recommend Netlify](../proxy/deploy.mdx#method-1-netlify-easy).  
-2. Once that's done, go to the **Connections** section of the **Settings page** on your sudo-flix instance of choice. 
-3. Enable `Use custom proxy workers` if it's not already enabled.  
-4. Add a new custom proxy by clicking `Add new worker`.
-5. Copy the URL of the proxy you deployed before, and paste it into the empty text box.
-![Example of settings page](/assets/proxy-url-example.gif)
+<Steps>
+  <Steps.Step>
+    Set up a proxy using one of our [guides](../proxy/deploy.mdx), [though we recommend Netlify](../proxy/deploy.mdx#method-1-netlify-easy).  
+  </Steps.Step>
+
+  <Steps.Step>
+    Once that's done, go to the **Connections** section of the **Settings page** on your sudo-flix instance of choice. 
+  </Steps.Step>
+
+  <Steps.Step>
+    Enable `Use custom proxy workers` if it's not already enabled.  
+  </Steps.Step>
+
+  <Steps.Step>
+    Add a new custom proxy by clicking `Add new worker`.
+  </Steps.Step>
+
+  <Steps.Step>
+    Copy the URL of the proxy you deployed before, and paste it into the empty text box.
+    ![Example of settings page](/assets/proxy-url-example.gif)
+  </Steps.Step>
+</Steps>
 
 <Note>
 If you're self-hosting the client, you can use the [`VITE_CORS_PROXY_URL`](../client/configuration.mdx#vite-cors-proxy-url) variable to set the proxy URL for everyone who uses your client.

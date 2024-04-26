@@ -6,104 +6,184 @@ title: 'Deploy'
 
 ## Method 1 - Vercel - Recommended
 
-1. Click [here](https://github.com/sussy-code/smov/fork) to fork the sudo-flix Github repository
-1. Click [here](https://vercel.com/) to go to Vercel
-1. Sign in using either a GitHub, GitLab, or Bitbucket.
-1. Clicking the "New Project" button on the top right of your dashboard and following the steps to create a new project for your self hosted version of movie web.
-1. After clicking it, you'll be presented with a list of Git repositories that the Git account you've signed up with has write access to. 
-![image](https://github.com/sussy-code/docs/assets/115524074/f0186018-4499-4c29-9d04-f6c421811704)
-1. Select your own fork of the sudo-flix Github repository.
-1. Configure the environment variables:
-
-   - `VITE_CORS_PROXY_URL`: Enter your proxy URL here. Make sure to not have a slash at the end of your URL.
-
-     Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `https://test-proxy.test.workers.dev`
-
-   - `VITE_TMDB_READ_API_KEY`: Enter your TMDB Read Access Token here. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
-
-   - `VITE_BACKEND_URL`: Only set if you have a self-hosted backend. Put in your backend URL. Check out [configuration reference](../client/configuration.mdx) for details. Make sure to not have a slash at the end of the URL.
-![Screenshot 2024-04-07 at 14-55-24 New Project – Vercel](https://github.com/sussy-code/docs/assets/115524074/a584ac1d-6e15-4618-8bb2-988985def3e0)
-1. Click "Deploy"
-1. Congrats! You have your own version of sudo-flix hosted.
-1. You may wish to configure a custom domain - Please consult [the Vercel docs for how to do this](https://vercel.com/docs/getting-started-with-vercel/domains).
+<Steps>
+  <Steps.Step>
+    Click [here](https://github.com/sussy-code/smov/fork) to fork the sudo-flix Github repository
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click [here](https://vercel.com/) to go to Vercel
+  </Steps.Step>
+  
+  <Steps.Step>
+    Sign in using either a GitHub, GitLab, or Bitbucket.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Clicking the "New Project" button on the top right of your dashboard and following the steps to create a new project for your self hosted version of movie web.
+  </Steps.Step>
+  
+  <Steps.Step>
+    After clicking it, you'll be presented with a list of Git repositories that the Git account you've signed up with has write access to. 
+  </Steps.Step>
+  
+  <Steps.Step>
+    Select your own fork of the sudo-flix Github repository.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Configure the environment variables:
+      - `VITE_CORS_PROXY_URL`: Enter your proxy URL here. Make sure to not have a slash at the end of your URL.
+  
+        Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `https://test-proxy.test.workers.dev`
+  
+      - `VITE_TMDB_READ_API_KEY`: Enter your TMDB Read Access Token here. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
+  
+      - `VITE_BACKEND_URL`: Only set if you have a self-hosted backend. Put in your backend URL. Check out [configuration reference](../client/configuration.mdx) for details. Make sure to not have a slash at the end of the URL.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Click "Deploy"
+  </Steps.Step>
+  
+  <Steps.Step>
+    Congrats! You have your own version of sudo-flix hosted.
+  </Steps.Step>
+  
+  <Steps.Step>
+    You may wish to configure a custom domain - Please consult [the Vercel docs for how to do this](https://vercel.com/docs/getting-started-with-vercel/domains).
+  </Steps.Step>
+</Steps>
 
 ## Method 2 - Static Web Host
 
-1. Download the file `sudo-flix.zip` from the latest release: https://github.com/sussy-code/smov/releases/latest.
-2. Extract the ZIP file so you can edit the files.
-3. Open `config.js` in an editor such as Notepad, Visual Studio Code or similar.
-4. Put your proxy URL in-between the double quotes of `VITE_CORS_PROXY_URL: ""`. Make sure to not have a slash at the end of your URL.
-
-   Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `VITE_CORS_PROXY_URL: "https://test-proxy.test.workers.dev"`
-
-5. Put your TMDB Read Access Token inside the quotes of `VITE_TMDB_READ_API_KEY: ""`. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
-6. If you have a self-hosted backend server, enter your URL in the `VITE_BACKEND_URL` variable. Check out [configuration reference](../client/configuration.mdx) for details. Make sure to not have a slash at the end of the URL.
-7. Save the file.
-8. Upload **all** of the files to a static website hosting such as:
-   - GitHub Pages
-   - Netlify
-   - Vercel
-   - Etc, [there are lots of options](https://www.staticwebsitehosting.org/).
-9. Congrats! You have your own version of sudo-flix hosted.
+<Steps>
+  <Steps.Step>
+    Download the file `sudo-flix.zip` from the latest release: https://github.com/sussy-code/smov/releases/latest.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Extract the ZIP file so you can edit the files.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Open `config.js` in an editor such as Notepad, Visual Studio Code or similar.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Put your proxy URL in-between the double quotes of `VITE_CORS_PROXY_URL: ""`. Make sure to not have a slash at the end of your URL.
+    Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `VITE_CORS_PROXY_URL: "https://test-proxy.test.workers.dev"`
+  </Steps.Step>
+  
+  <Steps.Step>
+    Put your TMDB Read Access Token inside the quotes of `VITE_TMDB_READ_API_KEY: ""`. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
+  </Steps.Step>
+  
+  <Steps.Step>
+    If you have a self-hosted backend server, enter your URL in the `VITE_BACKEND_URL` variable. Check out [configuration reference](../client/configuration.mdx) for details. Make sure to not have a slash at the end of the URL.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Save the file.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Upload **all** of the files to a static website hosting such as:
+      - GitHub Pages
+      - Netlify
+      - Vercel
+      - Etc, [there are lots of options](https://www.staticwebsitehosting.org/).
+  </Steps.Step>
+  
+  <Steps.Step>
+    Congrats! You have your own version of sudo-flix hosted.
+  </Steps.Step>
+</Steps>
 
 ## Method 3 - Docker Compose - Home Network
 
 This method is meant for those using a desktop device or single board computer with a minimum of 4GB of RAM such as a [Raspberry Pi](https://www.raspberrypi.com/) to run sudo-flix on there home network for network connected devices.
 
-1. Ensure you have [docker](https://docs.docker.com/get-docker/) installed. In a newly created directory called `sudo-flix` create a file called `docker-compose.yaml`. Paste the contents of the code block below into this file.
-
-```yaml
-version: "3.8"
-
-services:
-
-  movieweb:
-    build:
-      context: https://github.com/sussy-code/smov.git
-      # args:
-      #   TMDB_READ_API_KEY: ""
-      #   CORS_PROXY_URL: ""
-      #   BACKEND_URL: ""
-    ports:
-      - "80:80"
-    restart: unless-stopped
-```
-
-2. Within the `docker-compose.yaml` file uncomment `args`, `TMDB_READ_API_KEY`, `CORS_PROXY_URL`. 
-- Make sure `args` is in-line with `context` 
-- Make sure `TMDB_READ_API_KEY` and `CORS_PROXY_URL` are tabbed once to the right of `args`.
-3. Put your proxy URL in-between the double quotes of `CORS_PROXY_URL: ""`. Make sure to not have a slash at the end of your URL. 
-
-   Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `CORS_PROXY_URL: "https://test-proxy.test.workers.dev"`
-
-4. Put your TMDB Read Access Token inside the quotes of `TMDB_READ_API_KEY: ""`. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
-5. Uncomment and add any [additional environment variables](configuration.mdx) you may need. Remove the `VITE_` prefix when adding an environment variable to `args`.
-6. Save the file!
-7. Now use [docker](https://docs.docker.com/get-docker/) to run `movieweb` as background service.
-
-```bash
-# sudo-flix is the current working directory
-$ docker compose up --detach
-```
-
-8. Verify that setup was successful
-- Navigate to `http://localhost`. You should see the UI for `sudo-flix`. Find something to watch and make sure that it plays. 
-- View logs with
-
-   ```bash
-   $ docker compose logs --follow movieweb
-   ```
-
-9. Set a static IP address for your device.
-- For Raspberry Pi: [guide](https://www.makeuseof.com/raspberry-pi-set-static-ip/)
-- For Mac: [guide](https://www.macinstruct.com/tutorials/how-to-set-a-static-ip-address-on-a-mac/)
-- For Windows: [guide](https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address)
-
-10. Navigate to movie web at `http://<static-ip-address` from another device connected to your network.
+<Steps>
+  <Steps.Step>
+    1. Ensure you have [docker](https://docs.docker.com/get-docker/) installed. In a newly created directory called `sudo-flix` create a file called `docker-compose.yaml`. Paste the contents of the code block below into this file.
+  
+      ```yaml
+      version: "3.8"
+      
+      services:
+      
+        movieweb:
+          build:
+            context: https://github.com/sussy-code/smov.git
+            # args:
+            #   TMDB_READ_API_KEY: ""
+            #   CORS_PROXY_URL: ""
+            #   BACKEND_URL: ""
+          ports:
+            - "80:80"
+          restart: unless-stopped
+      ```
+  </Steps.Step>
+  
+  <Steps.Step>
+    Within the `docker-compose.yaml` file uncomment `args`, `TMDB_READ_API_KEY`, `CORS_PROXY_URL`. 
+      - Make sure `args` is in-line with `context` 
+      - Make sure `TMDB_READ_API_KEY` and `CORS_PROXY_URL` are tabbed once to the right of `args`.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Put your proxy URL in-between the double quotes of `CORS_PROXY_URL: ""`. Make sure to not have a slash at the end of your URL. 
+  
+    Example (THIS IS AN EXAMPLE, IT WON'T WORK FOR YOU): `CORS_PROXY_URL: "https://test-proxy.test.workers.dev"`
+  </Steps.Step>
+  
+  <Steps.Step>
+    Put your TMDB Read Access Token inside the quotes of `TMDB_READ_API_KEY: ""`. Please read [the TMDB page](./tmdb.mdx) on how to get an API key.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Uncomment and add any [additional environment variables](configuration.mdx) you may need. Remove the `VITE_` prefix when adding an environment variable to `args`.
+  </Steps.Step>
+  
+  <Steps.Step>
+    Save the file!
+  </Steps.Step>
+  
+  <Steps.Step>
+    Now use [docker](https://docs.docker.com/get-docker/) to run `movieweb` as background service.
+  
+      ```bash
+      # sudo-flix is the current working directory
+      $ docker compose up --detach
+      ```
+  </Steps.Step>
+  
+  <Steps.Step>
+    Verify that setup was successful
+      - Navigate to `http://localhost`. You should see the UI for `sudo-flix`. Find something to watch and make sure that it plays. 
+      - View logs with
+  
+      ```bash
+      $ docker compose logs --follow movieweb
+      ```
+  </Steps.Step>
+  
+  <Steps.Step>
+    Set a static IP address for your device.
+      - For Raspberry Pi: [guide](https://www.makeuseof.com/raspberry-pi-set-static-ip/)
+      - For Mac: [guide](https://www.macinstruct.com/tutorials/how-to-set-a-static-ip-address-on-a-mac/)
+      - For Windows: [guide](https://www.pcmag.com/how-to/how-to-set-up-a-static-ip-address)
+  </Steps.Step>
+  
+  <Steps.Step>
+    Navigate to movie web at `http://<static-ip-address` from another device connected to your network.
+  </Steps.Step>
+</Steps>
 
 ### To Perform Updates For New Releases of Movie Web
 
-1. Make sure `sudo-flix` is your current working directory and run:
+Make sure `sudo-flix` is your current working directory and run:
 
 ```bash
 # Re-build the image and start the container
