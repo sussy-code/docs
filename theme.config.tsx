@@ -4,8 +4,22 @@ import { NextSeo } from 'next-seo';
 import coverUrl from "./public/cover.png"; 
 import faviconUrl from "./public/favicon.ico";
 
+const starLinks = [
+  link('GitHub', 'https://github.com/sussy-code/smov', {
+    style: 'star',
+    newTab: true,
+    icon: 'akar-icons:github-fill',
+  }),
+  link('Discord', 'https://discord.gg/9vmr6vBQKS', {
+    style: 'star',
+    newTab: true,
+    icon: 'fa6-brands:discord',
+  }),
+];
+
 export default defineTheme({
   github: "sussy-code/smov",
+  navigation: [link('Check it out', 'https://sudo-flix.lol')],
   contentFooter: {
     text: "Made with :3 (sillyness)",
     editRepositoryBase: "https://github.com/sussy-code/docs/blob/master",
@@ -39,6 +53,7 @@ export default defineTheme({
   ),
   settings: {
     logo: () => <Logo />,
+    backgroundPattern: 'flare',
     colors: {
       "primary": "#A476D9",
       "primaryLighter": "#C4ADDE",
@@ -51,11 +66,12 @@ export default defineTheme({
       "text": "#8C899A",
       "textLighter": "#A6A4AE",
       "textHighlight": "#fff"
-    }
+    },
   },
   directories: [
     directory("main", {
       sidebar: [
+        ...starLinks,
         group("Global", [
           link("Instances", "/instances", { icon: 'mdi:web' }),
           link("Browser extension", "/extension", { icon: 'mdi:extension' }),
