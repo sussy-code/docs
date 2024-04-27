@@ -12,13 +12,15 @@ export default function LandingPage() {
   return (
     <GuiderLayout meta={{ layout: 'page' }}>
       <Hero>
-        <div style={{ paddingBottom: '2em' }}>
-          <img src={logoUrl.src} alt="Logo of sudo-flix" />
+        <div style={{ paddingBottom: '0.7em' }}>
+          <Frame>
+            <img src={logoUrl.src} alt="Logo of sudo-flix" />
+          </Frame>
         </div>
         <Hero.Title>sudo-flix</Hero.Title>
         <Hero.Subtitle>
-          A simple and no-BS app for watching movies and TV shows. Totally free
-          and open source, forever.
+          A cutesy app for watching your favorite movies and shows. Totally free
+          and open source, forever!
         </Hero.Subtitle>
         <Hero.Actions>
           <Button to="/self-hosting/hosting-intro">Get Started</Button>
