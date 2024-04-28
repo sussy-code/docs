@@ -10,7 +10,7 @@ const starLinks = [
     newTab: true,
     icon: 'akar-icons:github-fill',
   }),
-  link('Discord', 'https://discord.gg/9vmr6vBQKS', {
+  link('Discord', 'https://discord.gg/kdkTZ4McvD', {
     style: 'star',
     newTab: true,
     icon: 'fa6-brands:discord',
@@ -25,7 +25,7 @@ export default defineTheme({
     editRepositoryBase: "https://github.com/sussy-code/docs/blob/master",
     socials: [
       social.github("https://github.com/sussy-code"),
-      social.discord("https://discord.gg/9vmr6vBQKS"),
+      social.discord("https://discord.gg/kdkTZ4McvD"),
     ]
   },
   meta: (pageMeta) => (
