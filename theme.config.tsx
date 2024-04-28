@@ -19,7 +19,17 @@ const starLinks = [
 
 export default defineTheme({
   github: "sussy-code/smov",
-  navigation: [link('Check it out', 'https://sudo-flix.lol')],
+  navigation: [
+    link('Discord', 'https://discord.gg/kdkTZ4McvD', {
+      style: 'star',
+      newTab: true,
+      icon: 'mdi:discord',
+    }),
+    link('Check it out', 'https://sudo-flix.lol', {
+      style: 'star',
+      newTab: true,
+    }),
+  ],
   contentFooter: {
     text: "Made with :3 (sillyness)",
     editRepositoryBase: "https://github.com/sussy-code/docs/blob/master",
