@@ -28,7 +28,7 @@
           - sudo-flix-network
 
       sudo-flix-backend:
-        image: ghcr.io/sudo-flix/backend:latest
+        image: ghcr.io/sussy-code/backend:latest
         restart: unless-stopped
         environment:
           MWB_SERVER__CORS: "https://movie-backend.example.tld https://movie.example.tld"
@@ -68,7 +68,7 @@
         restart: unless-stopped
 
       sudo-flix-proxy:
-        image: ghcr.io/sudo-flix/simple-proxy:latest
+        image: ghcr.io/sussy-code/sudo-proxy:latest
         ports:
           - "3000:3000"
         networks:
