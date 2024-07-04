@@ -55,7 +55,66 @@ title: 'Deploy'
   </Steps.Step>
 </Steps>
 
-## Method 2 - Static Web Host
+## Method 2 - Cloudflare Pages (Best host)
+<Steps>
+  <Steps.Step>
+    [Fork sudo-flix](https://github.com/sussy-code/smov/fork) on Github.
+  </Steps.Step>
+
+  <Steps.Step>
+    Go to [Cloudflare pages](https://pages.dev) and click "Sign Up".
+  </Steps.Step>
+
+  <Steps.Step>
+    Create a Cloudflare account.
+    <Note>
+      If you already have a Cloudflare account you will be redirected to the workers and pages dashboard.
+    </Note>
+  </Steps.Step>
+
+  <Steps.Step>
+    Now, click the blue "Create" button at the top of the page.
+  </Steps.Step>
+
+  <Steps.Step>
+    By default Cloudflare assumes your creating a worker instead, change the "Workers" tab to "Pages".
+  </Steps.Step>
+
+  <Steps.Step>
+    Select the blue button that says "Connect to git" and then connect the Github account you forked sudo-flix on.
+  </Steps.Step>
+
+  <Steps.Step>
+    Now you can select repositories from your github account, select your fork of sudo-flix and click "Begin setup".
+  </Steps.Step>
+
+  <Steps.Step>
+    Give your project a silly name and select `main` as the production branch.
+  </Steps.Step>
+
+  <Steps.Step>
+    In "Build settings" change the "Build command" to `pnpm build` and the "Build output directory" to `dist`.
+  </Steps.Step>
+
+  <Steps.Step>
+    Select the `Environment variable` drop down and add the below variables.
+    ```env
+    VITE_CORS_PROXY_URL = PUT_A_PROXY_URL_HERE
+    VITE_BACKEND_URL = https://backend.sudo-flix.lol
+    VITE_TMDB_READ_API_KEY = eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzlkZWYyZDY5ZWFlNDk4ZjJiOTI4MTgyNDdjM2ViMCIsInN1YiI6IjY2MjdmMGJlNjJmMzM1MDE0YmQ4NTFmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.h3KpPvkiaz8uNz1bntAKqsPrxG_4UUWaY3kYME6N6m8
+    ```
+  </Steps.Step>
+
+  <Steps.Step>
+    Click "Save and Deploy" to watch your new site deploy.
+  </Steps.Step>
+
+  <Steps.Step>
+    Congrats! You have your own version of sudo-flix hosted for **FREE**.
+  </Steps.Step>
+</Steps>
+
+## Method 3 - Static Web Host
 
 <Steps>
   <Steps.Step>
@@ -100,7 +159,7 @@ title: 'Deploy'
   </Steps.Step>
 </Steps>
 
-## Method 3 - Docker Compose - Home Network
+## Method 4 - Docker Compose - Home Network
 
 This method is meant for those using a desktop device or single board computer with a minimum of 4GB of RAM such as a [Raspberry Pi](https://www.raspberrypi.com/) to run sudo-flix on there home network for network connected devices.
 
