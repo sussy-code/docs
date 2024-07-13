@@ -68,15 +68,33 @@ export default function DiscordRedirect() {
             textAlign: 'center',
           }}
         >
-          <h1 style={{ fontSize: '1.65em', color: '#A6A4AE', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <h1
+            style={{
+              fontSize: '1.65em',
+              color: '#A6A4AE',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
             Redirecting you to our Discord in:
             {countdown <= 0 ? (
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+              >
                 <a
                   href={redirectUrl}
                   style={{ color: '#8C899A', fontSize: '0.62em' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
-                  onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.textDecoration = 'underline')
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.textDecoration = 'none')
+                  }
                 >
                   *Click here if you are not redirected
                 </a>
