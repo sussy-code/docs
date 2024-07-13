@@ -10,7 +10,7 @@ const starLinks = [
     newTab: true,
     icon: 'akar-icons:github-fill',
   }),
-  link('Discord', 'https://discord.gg/kdkTZ4McvD', {
+  link('Discord', '/links/discord', {
     style: 'star',
     newTab: true,
     icon: 'fa6-brands:discord',
@@ -20,7 +20,7 @@ const starLinks = [
 export default defineTheme({
   github: "sussy-code/smov",
   navigation: [
-    link('Discord', 'https://discord.gg/kdkTZ4McvD', {
+    link('Discord', '/links/discord', {
       style: 'star',
       newTab: true,
       icon: 'mdi:discord',
@@ -35,7 +35,7 @@ export default defineTheme({
     editRepositoryBase: "https://github.com/sussy-code/docs/blob/master",
     socials: [
       social.github("https://github.com/sussy-code"),
-      social.discord("https://discord.gg/kdkTZ4McvD"),
+      social.discord("/links/discord"),
     ]
   },
   meta: (pageMeta) => (
