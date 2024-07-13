@@ -25,7 +25,7 @@ export default defineTheme({
       newTab: true,
       icon: 'mdi:discord',
     }),
-    link('Check it out', 'https://sudo-flix.lol', {
+    link('Check it out', '/instances', {
       style: 'star',
       newTab: true,
     }),

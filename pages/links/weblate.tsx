@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
-const redirectUrl = 'https://discord.gg/mxhcENzG2j';
+const redirectUrl = 'https://weblate.tinypixel.uk/projects/sudo-flix/main/';
 
-export default function DiscordRedirect() {
+export default function WeblateRedirect() {
   const [countdown, setCountdown] = useState(5);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function DiscordRedirect() {
         <h1
           style={{ fontSize: '2.5em', paddingBlock: '0.6em', color: '#A6A4AE' }}
         >
-          Sudo-Flix Discord
+          Sudo-Flix Weblate
         </h1>
         <hr
           style={{
@@ -69,7 +69,7 @@ export default function DiscordRedirect() {
           }}
         >
           <h1 style={{ fontSize: '1.65em', color: '#A6A4AE', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            Redirecting you to our Discord in:
+            Redirecting you to our Weblate in:
             {countdown <= 0 ? (
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <a
