@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+const redirectTitle = 'Weblate';
 const redirectUrl = 'https://weblate.tinypixel.uk/projects/sudo-flix/main/';
 
 export default function WeblateRedirect() {
@@ -39,14 +40,12 @@ export default function WeblateRedirect() {
         <h1
           style={{ fontSize: '2.5em', paddingBlock: '0.6em', color: '#A6A4AE' }}
         >
-          Sudo-Flix Weblate
+          Sudo-Flix {redirectTitle}
         </h1>
         <hr
           style={{
             marginInline: '2em',
-            backgroundColor: '#37334C',
-            border: 'none',
-            height: '0.1em',
+            border: 'solid 0.1em #37334C',
           }}
         />
       </div>
@@ -55,20 +54,20 @@ export default function WeblateRedirect() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '50vh',
+          height: '80vh',
         }}
       >
         <div
           style={{
             padding: '1em',
             marginInline: '2.5em',
-            border: 'solid 1px #37334C',
+            border: 'solid 0.1em #37334C',
             borderRadius: '0.35em',
             alignItems: 'center',
             textAlign: 'center',
           }}
         >
-          <h1
+          <div
             style={{
               fontSize: '1.65em',
               color: '#A6A4AE',
@@ -77,32 +76,65 @@ export default function WeblateRedirect() {
               alignItems: 'center',
             }}
           >
-            Redirecting you to our Weblate in:
+            {countdown > 0
+              ? `Redirecting you to our ${redirectTitle} in:`
+              : `Redirecting you now...`}
             {countdown <= 0 ? (
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                }}
+              <a
+                href={redirectUrl}
+                style={{ color: '#8C899A', fontSize: '0.6em' }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.textDecoration = 'underline')
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.textDecoration = 'none')
+                }
               >
-                <a
-                  href={redirectUrl}
-                  style={{ color: '#8C899A', fontSize: '0.62em' }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.textDecoration = 'underline')
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.textDecoration = 'none')
-                  }
-                >
-                  *Click here if you are not redirected
-                </a>
-              </div>
-            ) : null}
-            <span style={{ fontWeight: 700 }}>{countdown}</span>
-          </h1>
+                *Click here if you&#39;re not redirected
+              </a>
+            ) : (
+              <span style={{ fontWeight: 700 }}>{countdown}</span>
+            )}
+          </div>
         </div>
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          color: '#8C899A',
+          fontSize: '0.7em',
+        }}
+      >
+        <p>© 2024 sudo-flix</p>
+        <p>
+          Follow us on{' '}
+          <a
+            href="https://x.com/sudoFlix"
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.textDecoration = 'underline')
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.textDecoration = 'none')
+            }
+          >
+            Twitter
+          </a>{' '}
+          and check out our{' '}
+          <a
+            href="https://github.com/sussy-code"
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.textDecoration = 'underline')
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.textDecoration = 'none')
+            }
+          >
+            Github
+          </a>
+          .
+        </p>
       </div>
     </div>
   );
