@@ -13,11 +13,9 @@ export default function LandingPage() {
     <GuiderLayout meta={{ layout: 'page' }}>
       <Hero>
         <div style={{ paddingBottom: '0.7em' }}>
-          <a href="https://sudo-flix.lol">
-            <Frame>
-              <img src={logoUrl.src} alt="Logo of sudo-flix" />
-            </Frame>
-          </a>
+          <Frame>
+            <img src={logoUrl.src} alt="Logo of sudo-flix" />
+          </Frame>
         </div>
         <Hero.Title>sudo-flix</Hero.Title>
         <Hero.Subtitle>
