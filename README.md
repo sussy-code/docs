@@ -1,4 +1,4 @@
 # sudo-flix docs
 
-Find it at https://docs.sudo-flix.lol
+Find it at: idk i got a C&D
 
