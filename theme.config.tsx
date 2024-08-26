@@ -84,7 +84,7 @@ export default defineTheme({
         ...starLinks,
         group("Global", [
           link("Instances", "/instances", { icon: 'mdi:web' }),
-          link("Browser extension", "/extension", { icon: 'mdi:extension' }),
+          link("Browser Extension", "/extension", { icon: 'mdi:extension' }),
           link("Support", "/support", { icon: 'mdi:help' }),
         ]),
         group("Self-Hosting", [
