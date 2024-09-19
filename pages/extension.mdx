@@ -79,9 +79,9 @@ These installation steps are for any chromium-based browsers such as Microsoft E
   </Steps.Step>
 </Steps>
 
-## Firefox-based Installation
+## Firefox-based Installation (Desktop)
 
-These installation steps are limited to **Firefox Extended Support Release (ESR), Firefox Developer Edition and Nightly versions** of Firefox
+These installation steps are limited to [Firefox Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/), [Firefox Developer Edition and Nightly versions](https://www.mozilla.org/en-US/firefox/channel/desktop/) of Firefox
 that will allow you to override the setting that enforces the extension signing requirement.
 
 ### Loading an XPI file
@@ -107,3 +107,46 @@ that will allow you to override the setting that enforces the extension signing 
     When prompted, choose `Continue to Installation` and then `Add`.
   </Steps.Step>
 </Steps>
+
+## Firefox-based Installation (Android)
+
+These installation steps are limited to [**Firefox Nightly for Developers**](https://play.google.com/store/apps/details?id=org.mozilla.fenix)
+that will allow you to override the setting that enforces the extension signing requirement.
+
+### Loading an XPI file
+
+<Steps>
+  <Steps.Step>
+    Download the XPI file from [here](https://github.com/sussy-code/browser-ext/releases/download/1.2.0/1.2.0-mwext-FIREFOX.xpi). It should automatically start the installation process.
+  </Steps.Step>
+
+  <Steps.Step>
+    Find and open your Firefox Nightly for Developers settings.
+  </Steps.Step>
+
+  <Steps.Step>
+    Scroll down to the bottom and open the `About Firefox Nightly` tab.
+  </Steps.Step>
+
+  <Steps.Step>
+    Tap the Firefox Nightly logo 5 times to enable `debug mode`.
+  </Steps.Step>
+
+  <Steps.Step>
+    Return to your browser and type `about:config` into the address bar.
+  </Steps.Step>
+
+  <Steps.Step>
+   Search for `xpinstall.signatures.required` and set it to `false` by clicking the toggle.
+  </Steps.Step>
+
+  <Steps.Step>
+    Return to your settings menu, find the "Install extension from file" tab under the Advanced category.
+  </Steps.Step>
+
+  <Steps.Step>
+    Choose the XPI file downloaded in the first step.
+  </Steps.Step>
+</Steps>
+
+
